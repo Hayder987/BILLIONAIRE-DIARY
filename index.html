@@ -7,7 +7,7 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- tailwind and daisy Ui -->    
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,11 +29,65 @@
         .inter{
             font-family: "Inter", sans-serif;
         }
+        .inknut-antiqua{
+          font-family: "Inknut Antiqua", serif;
+        }
       </style>
 
 </head>
-<body>
-    
+<body class="inter container mx-auto">
+    <main class="flex h-lvh border-2 border-black">
+      <!-- sidebar -->
+       <div class="w-3/12 bg-primaryBg px-6 py-4">
+        <div class="flex justify-center flex-col items-center gap-3">
+          <h1 class="text-gray-200 text-2xl font-semibold">BILLIONAIRE</h1>
+          <h3 class="text-gray-300 text-xl font-medium">DIARY</h3>
+        </div>
+        <div class="mt-12 flex flex-col justify-center items-center">
+          <div class="flex flex-col gap-4 w-full">
+            <button class="flex flex-col justify-center items-center bg-secondaryBg w-full p-3 h-16"><span class="text-xl font-bold">Add a user</span> <span>(Randomly)</span></button>
+            <button class="flex flex-col justify-center items-center bg-secondaryBg w-full p-3 h-16 "><span class="text-xl font-bold">Double Money</span> </button>
+            <button class="flex flex-col justify-center items-center bg-secondaryBg w-full p-3 h-16 "><span class="text-xl font-bold">Sort By Rank </span>(Decending) </button>
+            <button class="flex flex-col justify-center items-center bg-secondaryBg w-full p-3 h-16 "><span class="text-xl font-bold">Calculate Entire Wealth</span> </button>
+            <div class="py-6 px-3">
+              <img src="./images/icons/divider.png" alt="" class="">
+            </div> 
+            <button class="flex flex-col justify-center items-center bg-secondaryBg w-full p-3 h-16"><span class="text-xl font-bold">Show All Billionaires</span> </button>
+            <button class="flex flex-col justify-center items-center bg-secondaryBg w-full p-3 h-16"><span class="text-xl font-bold">Richest by industry</span> <span>(Technology)</span></button>
+            <button class="flex flex-col justify-center items-center bg-secondaryBg w-full p-3 h-16"><span class="text-xl font-bold">Richest by states</span> <span>(Texas)</span></button>
+
+          </div>
+        </div>
+         
+       </div>
+       <!-- content -->
+        <div class="w-9/12 bg-secondaryBg p-12 overflow-scroll">
+          <nav class="bg-white p-12 flex justify-between items-center">
+           <input type="text" class="border-b-2 border-black p-3" placeholder="Search">
+           <img src="./images/logo/logo1.png" alt="" class="w-16 h-16">
+          </nav>
+          <div class="mb-12 mt-12">
+            <h1 class="text-2xl font-semibold">Hello, User!</h1>
+          </div>
+          <div class="border-b-2 border-black py-6 mb-6">
+            <ul class="grid grid-cols-6 gap-6 text-2xl font-semibold px-4">
+              <li class="">Person</li>
+              <li class="">Images</li>
+              <li class="">Citizenship</li>
+              <li class="">Industry</li>
+              <li class="">Rank</li>
+              <li class="">Wealth</li>
+            </ul>
+          </div>
+          <div id="dataDiv" class="flex flex-col gap-4 mb-6">
+
+          </div>
+          <div class="flex justify-center items-center">
+            <button id="showAll" class="text-xl font-semibold inknut-antiqua">Show All</button>
+          </div>
+
+        </div>
+    </main>
    
     
     <script src="./js/script.js"></script>
